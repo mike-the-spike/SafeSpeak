@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace SafeSpeak.Services
+namespace SafeSpeak.API.Services
 {
     public interface IConversationService
     {
         Task<IEnumerable<Conversation>> GetAllConversationsAsync();
         Task<Conversation> GetConversationByIdAsync(int id);
-        Task<IEnumerable<Conversation>> GetConversationsByUserIdAsync(int userId);
-        Task CreateConversationAsync(Conversation conversation);
+        Task AddConversationAsync(Conversation conversation);
         Task UpdateConversationAsync(Conversation conversation);
         Task DeleteConversationAsync(Conversation conversation);
     }

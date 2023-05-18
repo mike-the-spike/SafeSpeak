@@ -6,6 +6,7 @@ using SafeSpeak.API.Data;
 using SafeSpeak.API.Data.Repositories;
 using SafeSpeak.Data.Repositories;
 using SafeSpeak.Services;
+using SafeSpeak.API.Services;
 
 namespace SafeSpeak
 {
@@ -33,11 +34,14 @@ namespace SafeSpeak
             services.AddScoped<IAppointmentRepository, AppointmentRepository>();
             services.AddScoped<IConversationRepository, ConversationRepository>();
             services.AddScoped<IDocumentRepository, DocumentRepository>();
-            services.AddScoped<ISessionRepository, SessionRepository>();
             services.AddScoped<IUserProfileRepository, UserProfileRepository>();
 
             // Register services for dependency injection
             services.AddScoped<IAppointmentService, AppointmentService>();
+            services.AddScoped<IConversationService,ConversationService>();
+            services.AddScoped<IMessageService, MessageService>();
+            services.AddScoped<IDocumentService, DocumentService>();
+            services.AddScoped<IUserService, UserService>();
 
 
         }

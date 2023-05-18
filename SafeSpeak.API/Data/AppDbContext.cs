@@ -12,7 +12,6 @@ namespace SafeSpeak.API.Data
         public DbSet<Conversation> Conversations { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Document> Documents { get; set; }
-        public DbSet<Session> Sessions { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
         // Add DbSet properties for other entity models
 
