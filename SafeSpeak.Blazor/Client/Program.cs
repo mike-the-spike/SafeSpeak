@@ -2,10 +2,13 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using SafeSpeak.Blazor.Client;
+using MudBlazor.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddMudServices();
 
 builder.Services.AddHttpClient("SafeSpeak.Blazor.ServerAPI", client => client.BaseAddress = new Uri("https://localhost:7107/"));
 
